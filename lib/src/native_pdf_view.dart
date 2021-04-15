@@ -246,7 +246,7 @@ class _PdfViewState extends State<PdfView> with SingleTickerProviderStateMixin {
                 return KeyedSubtree(
                   key: Key('$runtimeType.page.'
                       '${widget.controller._document.hashCode}.'
-                      '${_pages[index].pageNumber}'),
+                      '${_pages != null ? _pages[index].pageNumber : ''}'),
                   child: widget.pageBuilder(
                     _pages[index],
                     index == _currentIndex,
